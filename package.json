@@ -1,0 +1,21 @@
+{
+  "name": "weather-dashboard-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "cd server && npm run watch\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TannerOliver/weather-dashboard-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TannerOliver/weather-dashboard-react/issues"
+  },
+  "homepage": "https://github.com/TannerOliver/weather-dashboard-react#readme"
+}
