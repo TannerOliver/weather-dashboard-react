@@ -12,6 +12,21 @@ export default function Aside() {
     }
   }
 
+  let secondApiCall = async ( lat, lon ) => {
+    console.log(lat);
+    console.log(lon);
+    // delete me
+  }
+
+  let firstApiCall = async (apiLink) => {
+    let firstApiFetch = await fetch(apiLink);
+    let firstApiFetchData = await firstApiFetch.json();
+    console.log(firstApiFetchData);
+    let lat = firstApiFetchData.coord.lat;
+    let lon = firstApiFetchData.coord.lon;
+    secondApiCall( lat, lon)
+  } 
+
   const fetchCity = async () => {
     let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';
     const apiKey = '&appid=81c8f33d2835754b525076279bdd2d53';
@@ -20,6 +35,7 @@ export default function Aside() {
     //  Set city in local storage
     saveCityLocally()
     //  Call first api call function
+    firstApiCall(requestUrl)
     //  Append searched city
     //  Clear the input field
     return (
